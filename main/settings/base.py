@@ -32,13 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'super_inlines',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
 
     # third party
     'rest_framework',
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'dj_rest_auth',
     # myapps
     'users',
+    'quiz'
 ]
 
 MIDDLEWARE = [
