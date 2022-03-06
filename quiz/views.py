@@ -1,22 +1,29 @@
-from django.shortcuts import render
 from rest_framework import generics
 
 from .models import Answers, Category, Question, Quiz
+from .permissions import IsStuffOrReadOnly
 from .serializers import CategorySerializer, QuestionSerializer, QuizSerializer
 
 
-class QuizList(generics.ListAPIView):
+class QuizList(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = (IsStuffOrReadOnly,)
 
 
-class QuizRead(generics.RetrieveAPIView):
-    queryset = Quiz.objects.all()
+class QuizRead(generics.ListCreateAPIView):
     serializer_class = QuizSerializer
-    lookup_field = 'id'
+    permission_classes = (IsStuffOrReadOnly,)
+
+    def get_queryset(self):
+        category = self.kwargs['category'].capitalize()
+        return Quiz.objects.filter(category__name=category)
 
 
-class QuestionRead(generics.RetrieveAPIView):
-    queryset = Question.objects.all()
+class QuestionRead(generics.ListCreateAPIView):
     serializer_class = QuestionSerializer
-    lookup_field = 'pk'
+    permission_classes = (IsStuffOrReadOnly,)
+
+    def get_queryset(self):
+        quiz = self.kwargs['quiz'].capitalize()
+        return Question.objects.filter(quiz__title=quiz)

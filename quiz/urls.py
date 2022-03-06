@@ -1,9 +1,9 @@
-from django.urls import include, path
+from django.urls import include, path, re_path
 
 from .views import QuestionRead, QuizList, QuizRead
 
 urlpatterns = [
     path('', QuizList.as_view(), name='quiz_list'),
-    path("<int:id>/", QuizRead.as_view(), name='quiz_read'),
-    path("<int:id>/<int:pk>/", QuestionRead.as_view(), name='question_read'),
+    path("<category>/", QuizRead.as_view(), name='quiz_read'),
+    path("<category>/<quiz>/", QuestionRead.as_view(), name='question_read'),
 ]
