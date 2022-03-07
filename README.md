@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Flight Reservation App</h1>
+<h1 align="center">Django Quiz App</h1>
 
 <div align="center">
   <h3>
