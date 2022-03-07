@@ -42,7 +42,7 @@ To clone and run this application, you'll need [Git](https://github.com/hsynarsl
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/hsynarsln/Django-Flight-Reservation-App.git
+$ git clone https://github.com/hsynarsln/Django-Quiz-App.git
 
 # Install dependencies
     $ python -m venv env
