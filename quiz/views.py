@@ -12,7 +12,7 @@ from .serializers import CategorySerializer, QuestionSerializer, QuizSerializer
 class QuizList(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['name']
 
@@ -20,7 +20,7 @@ class QuizList(generics.ListAPIView):
 class QuizRead(generics.ListAPIView):
     queryset = Quiz.objects.all()
     serializer_class = QuizSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['title']
 
