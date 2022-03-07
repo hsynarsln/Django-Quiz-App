@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_yasg',
     'dj_rest_auth',
+    'django_filters',
+
     # myapps
     'users',
     'quiz'

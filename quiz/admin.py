@@ -26,6 +26,7 @@ class AnswersAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('quiz', 'title', 'difficulty')
+    inlines = [AnswersInline]
 
 
 admin.site.register(Category)
