@@ -1,14 +1,10 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Flight Reservation App</h1>
+<h1 align="center">Django Quiz App</h1>
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
-    </a>
-     | 
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://dj-quiz-app-hsyn.herokuapp.com/">
       Project
     </a>
  
@@ -42,11 +38,11 @@
 
 <!-- This is an example, please update according to your application -->
 
-To clone and run this application, you'll need [Git](https://git-scm.com)
+To clone and run this application, you'll need [Git](https://github.com/hsynarsln/Django-Quiz-App.git)
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/hsynarsln/Django-Flight-Reservation-App.git
+$ git clone https://github.com/hsynarsln/Django-Quiz-App.git
 
 # Install dependencies
     $ python -m venv env
